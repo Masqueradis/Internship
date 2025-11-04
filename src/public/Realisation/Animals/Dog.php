@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Realisation\Animals;
+
+class Dog implements Animal
+{
+    public function makeSound()
+    {
+        echo "woof woof <br>";
+    }
+
+    public function eat()
+    {
+        echo "The dog eats <br>";
+    }
+
+    public function sleep()
+    {
+        echo "The dog sleeps <br>";
+    }
+}
