@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install intl gd zip \
     && rm -rf /var/lib/apt/lists/*
 
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
 
@@ -27,5 +29,7 @@ FROM base AS dev
 
 FROM base AS prod
 
+COPY composer.json composer.lock ./
+RUN composer install
 
 COPY ./src /var/www/html
