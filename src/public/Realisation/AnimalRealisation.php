@@ -8,7 +8,11 @@ use Realisation\Animals\Dog;
 use Realisation\Animals\Cat;
 use Realisation\Animals\Bird;
 
-$animals = [new Dog(), new Cat(), new Bird()];
+$animals = [
+    new Dog(), 
+    new Cat(), 
+    new Bird()
+];
 
 foreach($animals as $animal)
 {
