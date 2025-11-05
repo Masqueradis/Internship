@@ -6,8 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Realisation\\Mails\\' => array($baseDir . '/src/Realisation/Mails'),
-    'Realisation\\Logger\\' => array($baseDir . '/src/Realisation/Logger'),
-    'Realisation\\Animals\\' => array($baseDir . '/src/Realisation/Animals'),
-    'Realisation\\' => array($baseDir . '/public/Realisation'),
+    'App\\Mails\\' => array($baseDir . '/src/App/Mails'),
+    'App\\Logger\\' => array($baseDir . '/src/App/Logger'),
+    'App\\Animals\\' => array($baseDir . '/src/App/Animals'),
+    'App\\' => array($baseDir . '/src/App'),
 );
