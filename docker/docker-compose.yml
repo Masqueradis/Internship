@@ -7,7 +7,7 @@ services:
     container_name: ${PROJECT_NAME}_php
     volumes:
       - ../src:/var/www/html:cached
-      - ./vendor:/var/www/html/vendor
+      - ./vendor:/var/www/html/vendor:cached
     networks:
       - ${PROJECT_NAME}
 
@@ -34,5 +34,6 @@ services:
       - ${PROJECT_NAME}
 
 networks:
-  sandbox:
+  PSR:
     driver: bridge
+    
