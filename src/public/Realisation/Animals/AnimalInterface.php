@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Realisation\Animals;
 
-interface Animal
+interface AnimalInterface
 {
     public function makeSound();
     public function eat();

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Realisation\Animals;
 
-class Bird implements Animal
+class Bird implements AnimalInterface
 {
     public function makeSound()
     {

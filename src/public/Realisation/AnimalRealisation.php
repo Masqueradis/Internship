@@ -8,12 +8,9 @@ use Realisation\Animals\Dog;
 use Realisation\Animals\Cat;
 use Realisation\Animals\Bird;
 
-$Bobik = new Dog();
-$Kitty = new Cat();
-$Yastreb = new Bird();
+$animals = [new Dog(), new Cat(), new Bird()];
 
-$objects = array($Bobik, $Kitty, $Yastreb);
-foreach($objects as $object)
+foreach($animals as $animal)
 {
     $object->makeSound();
     $object->eat();
