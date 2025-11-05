@@ -1,10 +1,10 @@
 {
     "autoload": {
         "psr-4": {
-            "App\\Animals\\": "src/App/Animals/",
-            "App\\Logger\\": "src/App/Logger/",
-            "App\\Mails\\": "src/App/Mails/",
-            "App\\": "src/App/"
+            "app\\Animals\\": "src/app/Animals/",
+            "app\\Logger\\": "src/app/Logger/",
+            "app\\Mails\\": "src/app/Mails/",
+            "app\\": "src/app/"
         }
     }
 }
