@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 namespace app\Animals;
 
-require_once __DIR__ . '/../vendor/autoload.php'; 
-
 use app\Animals\Dog;
 use app\Animals\Cat;
 use app\Animals\Bird;
 
-class AnimalInvoker
+class AnimalImplementation
 {
-    public function __invoker()
+    public function __invoke()
     {
         $animals = [
             new Dog(), 
@@ -29,4 +27,3 @@ class AnimalInvoker
         }
     }
 }
-echo "<a href='../index.php'>Back</a>";

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Realisation\Animals;
+namespace app\Animals;
 
 class Cat implements AnimalInterface
 {
