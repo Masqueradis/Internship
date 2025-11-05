@@ -34,5 +34,5 @@ services:
       - ${PROJECT_NAME}
 
 networks:
-  ${PROJECT_NAME}:
+  sandbox:
     driver: bridge
