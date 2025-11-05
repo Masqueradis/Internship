@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Realisation\\Animals\\": "src/Realisation/Animals/",
+            "Realisation\\Logger\\": "src/Realisation/Logger/",
+            "Realisation\\Mails\\": "src/Realisation/Mails/",
+            "Realisation\\": "public/Realisation/"
+        }
+    }
+}
