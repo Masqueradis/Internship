@@ -6,7 +6,7 @@ namespace Realisation\Animals;
 
 interface AnimalInterface
 {
-    public function makeSound();
-    public function eat();
-    public function sleep();
+    public function makeSound(): string;
+    public function eat(): string;
+    public function sleep(): string;
 }

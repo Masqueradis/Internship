@@ -6,18 +6,18 @@ namespace Realisation\Animals;
 
 class Bird implements AnimalInterface
 {
-    public function makeSound()
+    public function makeSound(): string
     {
-        echo "tweet tweet <br>";
+        return "tweet tweet <br>";
     }
 
-    public function eat()
+    public function eat(): string
     {
-        echo "The bird eats <br>";
+        return "The bird eats <br>";
     }
 
-    public function sleep()
+    public function sleep(): string
     {
-        echo "The bird sleeps <br>";
+        return "The bird sleeps <br>";
     }
 }

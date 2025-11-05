@@ -6,18 +6,18 @@ namespace Realisation\Animals;
 
 class Dog implements AnimalInterface
 {
-    public function makeSound()
+    public function makeSound(): string
     {
-        echo "woof woof <br>";
+        return "woof woof <br>";
     }
 
-    public function eat()
+    public function eat(): string
     {
-        echo "The dog eats <br>";
+        return "The dog eats <br>";
     }
 
-    public function sleep()
+    public function sleep(): string
     {
-        echo "The dog sleeps <br>";
+        return "The dog sleeps <br>";
     }
 }

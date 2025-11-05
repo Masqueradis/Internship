@@ -6,18 +6,18 @@ namespace Realisation\Animals;
 
 class Cat implements AnimalInterface
 {
-    public function makeSound()
+    public function makeSound(): string
     {
-        echo "meow meow <br>";
+        return "meow meow <br>";
     }
 
-    public function eat()
+    public function eat(): string
     {
-        echo "The cat eats <br>";
+        return "The cat eats <br>";
     }
 
-    public function sleep()
+    public function sleep(): string
     {
-        echo "The cat sleeps <br>";
+        return "The cat sleeps <br>";
     }
 }

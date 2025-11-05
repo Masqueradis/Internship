@@ -2,24 +2,31 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/../../vendor/autoload.php'; 
+namespace app\Animals;
 
-use Realisation\Animals\Dog;
-use Realisation\Animals\Cat;
-use Realisation\Animals\Bird;
+require_once __DIR__ . '/../vendor/autoload.php'; 
 
-$animals = [
-    new Dog(), 
-    new Cat(), 
-    new Bird()
-];
+use app\Animals\Dog;
+use app\Animals\Cat;
+use app\Animals\Bird;
 
-foreach($animals as $animal)
+class AnimalInvoker
 {
-    $animal->makeSound();
-    $animal->eat();
-    $animal->sleep();
-    echo "<br>";
-}
+    public function __invoker()
+    {
+        $animals = [
+            new Dog(), 
+            new Cat(), 
+            new Bird()
+        ];
 
+        foreach($animals as $animal)
+        {
+            $animal->makeSound();
+            $animal->eat();
+            $animal->sleep();
+            echo "<br>";
+        }
+    }
+}
 echo "<a href='../index.php'>Back</a>";
