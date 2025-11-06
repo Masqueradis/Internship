@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Realisation\Logger;
+namespace app\Logger\Interface;
 
 interface LoggerInterface
 {

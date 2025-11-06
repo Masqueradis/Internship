@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Realisation\Logger;
+namespace app\Logger\Entity;
+
+use app\Logger\Interface\LoggerInterface;
 
 class Logger implements LoggerInterface
 {
