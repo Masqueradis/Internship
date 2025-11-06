@@ -8,7 +8,7 @@ use app\Animals\Entity\Dog;
 use app\Animals\Entity\Cat;
 use app\Animals\Entity\Bird;
 
-class AnimalImplementation
+class AnimalInvoker
 {
     public function __invoke()
     {
