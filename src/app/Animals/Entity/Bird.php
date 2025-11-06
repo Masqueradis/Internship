@@ -2,22 +2,24 @@
 
 declare(strict_types=1);
 
-namespace app\Animals;
+namespace app\Animals\Entity;
+
+use app\Animals\Interface\AnimalInterface;
 
 class Bird implements AnimalInterface
 {
-    public function makeSound(): string
+    public function makeSound()
     {
-        return "tweet tweet <br>";
+        echo "tweet tweet <br>";
     }
 
-    public function eat(): string
+    public function eat()
     {
-        return "The bird eats <br>";
+        echo "The bird eats <br>";
     }
 
-    public function sleep(): string
+    public function sleep()
     {
-        return "The bird sleeps <br>";
+        echo "The bird sleeps <br>";
     }
 }

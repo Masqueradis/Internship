@@ -2,22 +2,24 @@
 
 declare(strict_types=1);
 
-namespace app\Animals;
+namespace app\Animals\Entity;
+
+use app\Animals\Interface\AnimalInterface;
 
 class Cat implements AnimalInterface
 {
-    public function makeSound(): string
+    public function makeSound()
     {
-        return "meow meow <br>";
+        echo "meow meow <br>";
     }
 
-    public function eat(): string
+    public function eat()
     {
-        return "The cat eats <br>";
+        echo "The cat eats <br>";
     }
 
-    public function sleep(): string
+    public function sleep()
     {
-        return "The cat sleeps <br>";
+        echo "The cat sleeps <br>";
     }
 }

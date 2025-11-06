@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace app\Animals;
+namespace app\Animals\Interface;
 
 interface AnimalInterface
 {
-    public function makeSound(): string;
-    public function eat(): string;
-    public function sleep(): string;
+    public function makeSound();
+    public function eat();
+    public function sleep();
 }

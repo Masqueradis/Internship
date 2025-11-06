@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace app\Animals;
 
-use app\Animals\Dog;
-use app\Animals\Cat;
-use app\Animals\Bird;
+use app\Animals\Entity\Dog;
+use app\Animals\Entity\Cat;
+use app\Animals\Entity\Bird;
 
 class AnimalImplementation
 {
