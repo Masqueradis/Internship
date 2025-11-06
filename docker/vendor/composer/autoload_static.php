@@ -19,19 +19,19 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
     public static $prefixDirsPsr4 = array (
         'app\\Mails\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/app/Mails',
+            0 => __DIR__ . '/../..' . '/app/Mails',
         ),
         'app\\Logger\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/app/Logger',
+            0 => __DIR__ . '/../..' . '/app/Logger',
         ),
         'app\\Animals\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/app/Animals',
+            0 => __DIR__ . '/../..' . '/app/Animals',
         ),
         'app\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/app',
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
