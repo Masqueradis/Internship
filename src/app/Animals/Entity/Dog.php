@@ -10,16 +10,16 @@ class Dog implements AnimalInterface
 {
     public function makeSound()
     {
-        echo "woof woof <br>";
+        printf('woof woof <br>');
     }
 
     public function eat()
     {
-        echo "The dog eats <br>";
+        printf('The dog eats <br>');
     }
 
     public function sleep()
     {
-        echo "The dog sleeps <br>";
+        printf('The dog sleeps <br>');
     }
 }

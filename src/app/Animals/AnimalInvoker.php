@@ -23,7 +23,7 @@ class AnimalInvoker
             $animal->makeSound();
             $animal->eat();
             $animal->sleep();
-            echo "<br>";
+            printf('<br>');
         }
     }
 }

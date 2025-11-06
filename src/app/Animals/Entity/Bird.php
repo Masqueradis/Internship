@@ -10,16 +10,16 @@ class Bird implements AnimalInterface
 {
     public function makeSound()
     {
-        echo "tweet tweet <br>";
+        printf('tweet tweet <br>');
     }
 
     public function eat()
     {
-        echo "The bird eats <br>";
+        printf('The bird eats <br>');
     }
 
     public function sleep()
     {
-        echo "The bird sleeps <br>";
+        printf('The bird sleeps <br>');
     }
 }
