@@ -10,61 +10,53 @@ class EmailInvoker
 {
     public function __invoke($messageType): void
     {
-        if ($messageType == 'Hello') 
-            {
+        if ($messageType == 'Hello') {
             $email = new EmailSender();
             $result = $email->sendHello('test@example.com');
 
-            if ($result) 
-            {
-                echo "Hello Email sent successfully!<br>";
-            } else 
-            {
-                echo "Failed to send email.<br>";
+            if ($result) {
+                printf ('Hello Email sent successfully!<br>');
+            } else {
+                printf ('Failed to send email.<br>');
             }
+
             return;
         }
-        if ($messageType == 'Reminder') 
-            {
+        if ($messageType == 'Reminder') {
             $email = new EmailSender();
             $result = $email->sendReminder('test@example.com');
 
-            if ($result) 
-            {
-                echo "Reminder Email sent successfully!<br>";
-            } else 
-            {
-                echo "Failed to send email.<br>";
+            if ($result) {
+                printf ('Reminder Email sent successfully!<br>');
+            } else {
+                printf ('Failed to send email.<br>');
             }
+
             return;
         }
 
-        if ($messageType == 'Notification') 
-        {   
+        if ($messageType == 'Notification') {   
             $email = new EmailSender();
             $result = $email->sendNotification('test@example.com');
 
-            if ($result) 
-            {
-                echo "Notification Email sent successfully!<br>";
-            } else 
-            {
-                echo "Failed to send email.<br>";
+            if ($result) {
+                printf ('Notification Email sent successfully!<br>');
+            } else {
+                printf ('Failed to send email.<br>');
             }
+
             return;
         }
-        else 
-        {
+        else {
             $email = new EmailSender();
             $result = $email->send('test@example.com');
 
-            if ($result) 
-            {
-                echo "Email sent successfully!<br>";
-            } else 
-            {
-                echo "Failed to send email.<br>";
+            if ($result) {
+                printf ('Email sent successfully!<br>');
+            } else {
+                printf ('Failed to send email.<br>');
             }
+
             return;
         }
     }
