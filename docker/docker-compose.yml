@@ -7,9 +7,7 @@ services:
     container_name: ${PROJECT_NAME}_php
     volumes:
       - ../src:/var/www/html:cached
-      - ../vendor:/var/www/html/vendor:cached
-      - ../composer.json:/var/www/html/composer.json:cached
-      - ../composer.lock:/var/www/html/composer.lock:cached
+      - ./vendor:/var/www/html/vendor:cached
     networks:
       - ${PROJECT_NAME}
 
