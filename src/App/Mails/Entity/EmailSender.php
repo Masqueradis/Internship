@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Mails\Entity;
+namespace App\Mails\Entity;
 
 class EmailSender
 {

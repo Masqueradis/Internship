@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace app\Mails;
+namespace App\Mails;
 
-use app\Mails\Entity\EmailSender;
+use App\Mails\Entity\EmailSender;
 
 class EmailInvoker
 {
@@ -22,6 +22,7 @@ class EmailInvoker
 
             return;
         }
+
         if ($messageType == 'Reminder') {
             $email = new EmailSender();
             $result = $email->sendReminder('test@example.com');
@@ -47,6 +48,7 @@ class EmailInvoker
 
             return;
         }
+        
         else {
             $email = new EmailSender();
             $result = $email->send('test@example.com');
