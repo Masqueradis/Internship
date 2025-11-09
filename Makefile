@@ -1,4 +1,4 @@
-PROJECT_NAME=sandbox
+PROJECT_NAME=PSR
 DOCKER_COMPOSE=docker compose -f docker/docker-compose.yml --env-file docker/.env
 
 .PHONY: up down restart build logs shell ps
