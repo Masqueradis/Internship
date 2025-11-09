@@ -29,7 +29,7 @@ FROM base AS dev
 
 FROM base AS prod
 
-COPY composer.json composer.lock ./
+COPY composer.json ./
 RUN composer install
 
 COPY ./src /var/www/html
