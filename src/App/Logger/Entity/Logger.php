@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace app\Logger\Entity;
+namespace App\Logger\Entity;
 
-use app\Logger\Interface\LoggerInterface;
+use App\Logger\Interface\LoggerInterface;
 
 class Logger implements LoggerInterface
 {
@@ -22,8 +22,7 @@ class Logger implements LoggerInterface
 
         echo $formattedMessage;
         
-        if($this->logFile)
-        {
+        if($this->logFile) {
             file_put_contents($this->logFile, $formattedMessage, FILE_APPEND | LOCK_EX);
         }
     }
@@ -31,10 +30,9 @@ class Logger implements LoggerInterface
     private function interpolate($message, array $context=[])
     {
     $replace = array();
-    foreach ($context as $key => $val) 
-        {
-        if (!is_array($val) && (!is_object($val) || method_exists($val, '__toString'))) 
-            {
+
+    foreach ($context as $key => $val) {
+        if (!is_array($val) && (!is_object($val) || method_exists($val, '__toString'))) {
             $replace['{' . $key . '}'] = $val;
             }
         }
@@ -44,7 +42,14 @@ class Logger implements LoggerInterface
     private function format ($level, $message, array $context = [])
     {
         $message = $this->interpolate($message, $context);
-        return '[' . date ('Y-m-d H:i:s') . '] ' . strtoupper($level) . ': ' . $message . PHP_EOL; 
+        
+        return sprintf(
+            '[%s] %s: %s%s',
+            date('Y-m-d H:i:s'),
+            strtoupper($level),
+            $message,
+            PHP_EOL
+        );
     }
 
     public function info($message, array $context = array()): void

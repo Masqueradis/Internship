@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\Logger\Entity;
+namespace App\Logger\Entity;
 
 class LogLevel
 {
@@ -14,4 +14,4 @@ class LogLevel
     const NOTICE    = 'notice';
     const INFO      = 'info';
     const DEBUG     = 'debug';
-}
+}   
