@@ -7,11 +7,14 @@ namespace App\Animals;
 use App\Animals\Entity\Dog;
 use App\Animals\Entity\Cat;
 use App\Animals\Entity\Bird;
+use App\Animals\Interface\AnimalInterface;
 
 class AnimalInvoker
 {
     public function __invoke()
     {
+
+        /** @var AnimalInterface[] $animals */        
         $animals = [
             new Dog(), 
             new Cat(), 
