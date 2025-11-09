@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace app\Animals\Entity;
+namespace Animals\Entity;
 
-use app\Animals\Interface\AnimalInterface;
+use Animals\Interface\AnimalInterface;
 
 class Dog implements AnimalInterface
 {

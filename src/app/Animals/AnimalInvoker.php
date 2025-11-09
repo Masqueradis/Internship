@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace app\Animals;
+namespace Animals;
 
-use app\Animals\Entity\Dog;
-use app\Animals\Entity\Cat;
-use app\Animals\Entity\Bird;
+use Animals\Entity\Dog;
+use Animals\Entity\Cat;
+use Animals\Entity\Bird;
 
 class AnimalInvoker
 {
