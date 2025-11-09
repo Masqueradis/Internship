@@ -1,6 +1,6 @@
 Task
 
-Create a  \"EmailSender\" class.
+Create a  "EmailSender" class.
 
 Define the namespace App\\Mail.
 
