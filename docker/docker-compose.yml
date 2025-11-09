@@ -7,7 +7,6 @@ services:
     container_name: ${PROJECT_NAME}_php
     volumes:
       - ../src:/var/www/html:cached
-
     networks:
       - ${PROJECT_NAME}
 
