@@ -30,6 +30,7 @@ FROM base AS dev
 FROM base AS prod
 
 COPY src/composer.json ./
+
 RUN composer install
 
 COPY ./src /var/www/html
