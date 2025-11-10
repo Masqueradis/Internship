@@ -29,7 +29,11 @@ FROM base AS dev
 
 FROM base AS prod
 
+<<<<<<< HEAD
 COPY composer.json composer.lock ./
+=======
+COPY src/composer.json ./
+>>>>>>> cf46c03 (composer.json moved)
 
 RUN composer install
 
