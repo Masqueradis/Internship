@@ -11,18 +11,17 @@ use App\Animals\Interface\AnimalInterface;
 
 class AnimalInvoker
 {
-    public function __invoke()
+    public function __invoke(): void
     {
 
-        /** @var AnimalInterface[] $animals */        
+        /** @var AnimalInterface[] $animals */
         $animals = [
-            new Dog(), 
-            new Cat(), 
+            new Dog(),
+            new Cat(),
             new Bird()
         ];
 
-        foreach($animals as $animal)
-        {
+        foreach ($animals as $animal) {
             $animal->makeSound();
             $animal->eat();
             $animal->sleep();

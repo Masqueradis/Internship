@@ -6,7 +6,7 @@ namespace App\Animals\Interface;
 
 interface AnimalInterface
 {
-    public function makeSound();
-    public function eat();
-    public function sleep();
+    public function makeSound(): void;
+    public function eat(): void;
+    public function sleep(): void;
 }
