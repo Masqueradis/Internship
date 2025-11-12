@@ -13,7 +13,6 @@ class AnimalInvoker
 {
     public function __invoke(): void
     {
-
         /** @var AnimalInterface[] $animals */
         $animals = [
             new Dog(),
@@ -25,6 +24,7 @@ class AnimalInvoker
             $animal->makeSound();
             $animal->eat();
             $animal->sleep();
+
             printf('<br>');
         }
     }
