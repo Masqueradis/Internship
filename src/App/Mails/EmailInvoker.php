@@ -10,48 +10,20 @@ class EmailInvoker
 {
     public function __invoke($messageType): void
     {
-        if ($messageType == 'Hello') {
-            $email = new EmailSender();
-            $result = $email->sendHello('test@example.com');
-
-            if ($result) {
-                printf ('Hello Email sent successfully!<br>');
-            } else {
-                printf ('Failed to send email.<br>');
-            }
-        }
-
-        if ($messageType == 'Reminder') {
-            $email = new EmailSender();
-            $result = $email->sendReminder('test@example.com');
-
-            if ($result) {
-                printf ('Reminder Email sent successfully!<br>');
-            } else {
-                printf ('Failed to send email.<br>');
-            }
-        }
-
-        if ($messageType == 'Notification') {   
-            $email = new EmailSender();
-            $result = $email->sendNotification('test@example.com');
-
-            if ($result) {
-                printf ('Notification Email sent successfully!<br>');
-            } else {
-                printf ('Failed to send email.<br>');
-            }
-        }
-        
-        else {
-            $email = new EmailSender();
-            $result = $email->send('test@example.com');
-
-            if ($result) {
-                printf ('Email sent successfully!<br>');
-            } else {
-                printf ('Failed to send email.<br>');
-            }
+        $email = new EmailSender();
+        switch ($messageType) {
+            case 'Hello':
+                $email->sendHello('test@example.com');
+                break;
+            case 'Reminder':
+                $email->sendReminder('test@example.com');
+                break;
+            case 'Notification':
+                $email->sendNotification('test@example.com');
+                break;
+            default:
+                $email->send('test@example.com');
+                break;
         }
     }
 }

@@ -7,24 +7,44 @@ class EmailSender
     public function send($to)
     {        
         $result = mail($to, 'Test', 'Test works');
-        return $result;
+
+        if ($result) {
+            printf ('Test Email sent successfully!<br>');
+        } else {
+            printf ('Failed to send email.<br>');
+        }
     }
 
     public function sendHello($to)
     {
         $result = mail($to, 'Hello!', 'Hello works');
-        return $result;
+
+        if ($result) {
+            printf ('Hello Email sent successfully!<br>');
+        } else {
+            printf ('Failed to send email.<br>');
+        }
     }   
 
     public function sendReminder($to)
     {
         $result = mail($to, 'Reminder!', 'Reminder works');
-        return $result;
+
+        if ($result) {
+            printf ('Reminder Email sent successfully!<br>');
+        } else {
+            printf ('Failed to send email.<br>');
+        }
     }
 
     public function sendNotification($to)
     {
         $result = mail($to, 'Notification!', 'Notification works');
-        return $result;
+
+        if ($result) {
+            printf ('Notification Email sent successfully!<br>');
+        } else {
+            printf ('Failed to send email.<br>');
+        }
     }
 }
