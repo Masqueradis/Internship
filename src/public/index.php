@@ -8,7 +8,6 @@ use App\Mails\EmailInvoker;
 
 $mail = new EmailInvoker();
 
-$mail('Test');
-$mail('Hello');
-$mail('Reminder');
-$mail('Notification');
+foreach($mail->gen() as $value) {
+    $mail($value);
+}
