@@ -19,8 +19,6 @@ class EmailInvoker
             } else {
                 printf ('Failed to send email.<br>');
             }
-
-            return;
         }
 
         if ($messageType == 'Reminder') {
@@ -32,8 +30,6 @@ class EmailInvoker
             } else {
                 printf ('Failed to send email.<br>');
             }
-
-            return;
         }
 
         if ($messageType == 'Notification') {   
@@ -45,8 +41,6 @@ class EmailInvoker
             } else {
                 printf ('Failed to send email.<br>');
             }
-
-            return;
         }
         
         else {
@@ -58,8 +52,6 @@ class EmailInvoker
             } else {
                 printf ('Failed to send email.<br>');
             }
-
-            return;
         }
     }
 }
