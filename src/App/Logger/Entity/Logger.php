@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace App\Logger\Entity;
 
-use App\Logger\Interface\LoggerInterface;
+use Psr\Log\AbstractLogger;
+use Psr\Log\LogLevel;
 
-class Logger implements LoggerInterface
+class Logger extends AbstractLogger
 {
     private $logFile;
 

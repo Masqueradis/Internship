@@ -8,6 +8,13 @@ use App\Logger\Entity\Logger;
 
 class LoggerInvoker
 {
+    private $strategy;
+    
+    public function setStrategy($strategy)
+    {
+        $this->strategy = $strategy;
+    }
+
     public function __invoke()
     {    
         $logFile = sys_get_temp_dir() . '/myapp_log.txt';
