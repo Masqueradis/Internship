@@ -1,5 +1,2 @@
 vendor
-
-/logs/
-/src/App/Logger/Entity/logs/
-*.log
+logs
