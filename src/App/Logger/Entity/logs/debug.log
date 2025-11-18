@@ -1,1 +1,8 @@
-[2025-11-18 10:48:15] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active
+[2025-11-18 23:06:07] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active
+[2025-11-18 23:06:29] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active
+[2025-11-18 23:06:29] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active
+[2025-11-18 23:06:37] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active
+[2025-11-18 23:06:37] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active
+[2025-11-18 23:06:37] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active
+[2025-11-18 23:06:47] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active
+[2025-11-18 23:06:49] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active

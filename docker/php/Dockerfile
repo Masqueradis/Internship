@@ -18,6 +18,8 @@ FROM base AS dev
 
 FROM base AS prod
 
+USER www-data
+
 COPY src/composer.json ./
 
 RUN composer install

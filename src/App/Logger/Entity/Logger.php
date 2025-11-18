@@ -36,7 +36,17 @@ class Logger extends AbstractLogger
         $context = $arguments[1];
             
         $this->logFile = $this->levelMap[$method]['file'];
-            
+
+        $dir = dirname($this->logFile);
+        
+        if (!is_dir($dir)) {
+            mkdir($dir, 0777, true);
+        }
+        
+        if (!file_exists($this->logFile)) {
+            touch($this->logFile);
+        }
+
         $this->log($this->levelMap[$method]['level'], $message, $context);
     }
 
