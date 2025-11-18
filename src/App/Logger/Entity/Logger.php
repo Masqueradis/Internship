@@ -11,9 +11,33 @@ class Logger extends AbstractLogger
 {
     private $logFile;
 
-    public function __construct($logFile = null)
+    private array $levelMap = [
+        'infoo' => [
+            'level' => LogLevel::INFO,
+            'file' => __DIR__ . '/logs/info.log'
+        ],
+        'warningg' => [
+            'level' => LogLevel::WARNING,
+            'file' => __DIR__ . '/logs/warning.log'
+        ],
+        'errorr' => [
+            'level' => LogLevel::ERROR,
+            'file' => __DIR__ . '/logs/error.log'
+        ],
+        'debugg' => [
+            'level' => LogLevel::DEBUG,
+            'file' => __DIR__ . '/logs/debug.log'
+        ]
+    ];
+
+    public function __call(string $method, array $arguments): void
     {
-        $this->logFile = $logFile;
+            $message = $arguments[0];
+            $context = $arguments[1];
+            
+            $this->logFile = $this->levelMap[$method]['file'];
+            
+            $this->log($this->levelMap[$method]['level'], $message, $context);
     }
 
     public function log($level, $message, array $context = array()): void
@@ -51,25 +75,5 @@ class Logger extends AbstractLogger
             $message,
             PHP_EOL
         );
-    }
-
-    public function info($message, array $context = array()): void
-    {
-        $this->log(LogLevel::INFO, $message, $context);
-    }
-
-    public function warning($message, array $context = array()): void
-    {
-        $this->log(LogLevel::WARNING, $message, $context);
-    }
-
-    public function error($message, array $context = array()): void
-    {
-        $this->log(LogLevel::ERROR, $message, $context);
-    }
-
-    public function debug($message, array $context = array()): void
-    {
-        $this->log(LogLevel::DEBUG, $message, $context);
     }
 }

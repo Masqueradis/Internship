@@ -8,32 +8,24 @@ use App\Logger\Entity\Logger;
 
 class LoggerInvoker
 {
-    private $strategy;
-    
-    public function setStrategy($strategy)
-    {
-        $this->strategy = $strategy;
-    }
-
     public function __invoke()
     {    
-        $logFile = sys_get_temp_dir() . '/myapp_log.txt';
-        $logger = new Logger($logFile);
+        $logger = new Logger();
 
-        $logger->error('Failed to connect {username} to {database}', 
+        $logger->errorr('Failed to connect {username} to {database}', 
         ['database' => 'mysql', 
         'username' => 'localhost']);
-        echo "<br>";
+        printf('<br>');
 
-        $logger->warning('Query is taking too long - {duration} seconds', 
+        $logger->warningg('Query is taking too long - {duration} seconds', 
         ['duration' => '3.2']);
-        echo "<br>";
+        printf('<br>');
 
-        $logger->info('User {username} has logged in' , 
+        $logger->infoo('User {username} has logged in' , 
         ['username' => 'localhost']);
-        echo "<br>";
+        printf('<br>');
 
-        $logger->debug('Executing SQL: {query} with params: {par}', 
+        $logger->debugg('Executing SQL: {query} with params: {par}', 
         ['query' => 'SELECT * FROM users WHERE status = ?', 
         'par' => 'active']);
     }
