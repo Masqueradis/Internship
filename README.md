@@ -1,5 +1,6 @@
 Task
 
+```
 Create a  "EmailSender" class.
 
 Define the namespace App\\Mail.
@@ -76,3 +77,4 @@ This step only needs to be run once. It will install vendor into a dedicated Doc
 
 
 Done. The project will be available at: http://localhost:8080.
+```
