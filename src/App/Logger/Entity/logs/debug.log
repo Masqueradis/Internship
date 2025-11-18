@@ -1,0 +1,1 @@
+[2025-11-18 10:48:15] DEBUG: Executing SQL: SELECT * FROM users WHERE status = ? with params: active

@@ -32,12 +32,12 @@ class Logger extends AbstractLogger
 
     public function __call(string $method, array $arguments): void
     {
-            $message = $arguments[0];
-            $context = $arguments[1];
+        $message = $arguments[0];
+        $context = $arguments[1];
             
-            $this->logFile = $this->levelMap[$method]['file'];
+        $this->logFile = $this->levelMap[$method]['file'];
             
-            $this->log($this->levelMap[$method]['level'], $message, $context);
+        $this->log($this->levelMap[$method]['level'], $message, $context);
     }
 
     public function log($level, $message, array $context = array()): void
@@ -54,14 +54,15 @@ class Logger extends AbstractLogger
 
     private function interpolate($message, array $context=[])
     {
-    $replace = array();
+        $replace = array();
 
-    foreach ($context as $key => $val) {
-        if (!is_array($val) && (!is_object($val) || method_exists($val, '__toString'))) {
-            $replace['{' . $key . '}'] = $val;
+        foreach ($context as $key => $val) {
+            if (!is_array($val) && (!is_object($val) || method_exists($val, '__toString'))) {
+                $replace['{' . $key . '}'] = $val;
+                }
             }
-        }
-    return strtr($message, $replace);
+            
+        return strtr($message, $replace);
     }
 
     private function format ($level, $message, array $context = [])
