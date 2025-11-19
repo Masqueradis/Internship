@@ -9,6 +9,9 @@ use Psr\Log\LogLevel;
 
 class Logger extends AbstractLogger
 {
+    /**
+     * @var AbstractLogger
+     */
     private $logFile;
 
     private array $levelMap = [
