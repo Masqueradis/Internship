@@ -1,7 +1,8 @@
 PROJECT_NAME=PSR
 DOCKER_COMPOSE=docker compose -f docker/docker-compose.yml --env-file docker/.env
+LEVEL ?= 0
 
-.PHONY: up down restart build logs shell ps install update
+.PHONY: up down restart build logs shell ps install update stan cs-fix cs-check
 
 up:
 	$(DOCKER_COMPOSE) up -d
@@ -30,3 +31,12 @@ install:
 
 update:
 	$(DOCKER_COMPOSE) exec php composer update
+
+stan:
+	$(DOCKER_COMPOSE) exec php composer stan -- --level $(LEVEL)
+	
+cs-fix:
+	$(DOCKER_COMPOSE) exec php composer cs-fix
+
+cs-check:
+	$(DOCKER_COMPOSE) exec php composer cs-check

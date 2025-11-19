@@ -13,9 +13,9 @@
         "phpstan/phpstan": "^1.0"
     },
     "scripts": {
-        "cs-fix": "",
-        "cs-check": "",
-        "stan": ""
+        "cs-fix": "php-cs-fixer fix --allow-risky=yes App public",
+        "cs-check": "php-cs-fixer fix --dry-run --diff --allow-risky=yes App public",
+        "stan": "phpstan analyse App public"
     },
     "config": {
         "allow-plugins": {

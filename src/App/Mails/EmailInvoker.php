@@ -12,9 +12,6 @@ use App\Mails\Entity\TestSender;
 
 class EmailInvoker
 {
-    /**
-     * @var EmailInvoker
-     */
     private $strategy;
 
     public function setStrategy($strategy): void
