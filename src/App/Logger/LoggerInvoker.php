@@ -8,25 +8,33 @@ use App\Logger\Entity\Logger;
 
 class LoggerInvoker
 {
-    public function __invoke()
-    {    
+    public function __invoke(): void
+    {
         $logger = new Logger();
 
-        $logger->errorr('Failed to connect {username} to {database}', 
-        ['database' => 'mysql', 
-        'username' => 'localhost']);
+        $logger->errorr(
+            'Failed to connect {username} to {database}',
+            ['database' => 'mysql',
+        'username' => 'localhost']
+        );
         printf('<br>');
 
-        $logger->warningg('Query is taking too long - {duration} seconds', 
-        ['duration' => '3.2']);
+        $logger->warningg(
+            'Query is taking too long - {duration} seconds',
+            ['duration' => '3.2']
+        );
         printf('<br>');
 
-        $logger->infoo('User {username} has logged in' , 
-        ['username' => 'localhost']);
+        $logger->infoo(
+            'User {username} has logged in',
+            ['username' => 'localhost']
+        );
         printf('<br>');
 
-        $logger->debugg('Executing SQL: {query} with params: {par}', 
-        ['query' => 'SELECT * FROM users WHERE status = ?', 
-        'par' => 'active']);
+        $logger->debugg(
+            'Executing SQL: {query} with params: {par}',
+            ['query' => 'SELECT * FROM users WHERE status = ?',
+        'par' => 'active']
+        );
     }
 }
