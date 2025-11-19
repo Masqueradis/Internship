@@ -13,9 +13,9 @@ class NotificationSender implements EmailInterface
         $result = mail($to, 'Notification', 'Hello works');
 
         if ($result) {
-            printf ('Notification Email sent successfully!<br>');
+            printf('Notification Email sent successfully!<br>');
         } else {
-            printf ('Failed to send email.<br>');
+            printf('Failed to send email.<br>');
         }
     }
 }

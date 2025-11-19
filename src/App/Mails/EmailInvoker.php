@@ -1,4 +1,5 @@
-<?php    
+<?php
+
 
 declare(strict_types=1);
 
@@ -11,9 +12,12 @@ use App\Mails\Entity\TestSender;
 
 class EmailInvoker
 {
+    /**
+     * @var EmailInvoker
+     */
     private $strategy;
 
-    public function setStrategy($strategy)
+    public function setStrategy($strategy): void
     {
         $this->strategy = $strategy;
     }
@@ -32,6 +36,6 @@ class EmailInvoker
 
     public function __invoke($to): void
     {
-         $this->strategy->send($to);
+        $this->strategy->send($to);
     }
 }

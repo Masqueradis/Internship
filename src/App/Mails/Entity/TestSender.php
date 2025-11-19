@@ -13,9 +13,9 @@ class TestSender implements EmailInterface
         $result = mail($to, 'Test', 'Hello works');
 
         if ($result) {
-            printf ('Test Email sent successfully!<br>');
+            printf('Test Email sent successfully!<br>');
         } else {
-            printf ('Failed to send email.<br>');
+            printf('Failed to send email.<br>');
         }
     }
 }

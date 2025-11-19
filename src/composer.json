@@ -3,5 +3,23 @@
         "psr-4": {
             "App\\": "App/"
         }
+    },
+    "require": {
+        "psr/log": "^3.0",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.0"
+    },
+    "scripts": {
+        "cs-fix": "",
+        "cs-check": "",
+        "stan": ""
+    },
+    "config": {
+        "allow-plugins": {
+            "friendsofphp/php-cs-fixer": true
+        }
     }
 }

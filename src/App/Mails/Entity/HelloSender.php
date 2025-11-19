@@ -8,14 +8,14 @@ use App\Mails\Interface\EmailInterface;
 
 class HelloSender implements EmailInterface
 {
-    public function send($to): void 
+    public function send($to): void
     {
         $result = mail($to, 'Hello', 'Hello works');
 
         if ($result) {
-            printf ('Hello Email sent successfully!<br>');
+            printf('Hello Email sent successfully!<br>');
         } else {
-            printf ('Failed to send email.<br>');
+            printf('Failed to send email.<br>');
         }
     }
 }

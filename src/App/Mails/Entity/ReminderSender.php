@@ -13,9 +13,9 @@ class ReminderSender implements EmailInterface
         $result = mail($to, 'Reminder', 'Hello works');
 
         if ($result) {
-            printf ('Reminder Email sent successfully!<br>');
+            printf('Reminder Email sent successfully!<br>');
         } else {
-            printf ('Failed to send email.<br>');
+            printf('Failed to send email.<br>');
         }
     }
 }
