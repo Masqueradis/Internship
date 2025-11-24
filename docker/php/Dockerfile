@@ -12,10 +12,6 @@ RUN pecl install xdebug \
 
 COPY ./docker/php/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
-RUN set -xe; \
-    apt-get update; \
-    apt-get -y install
-
 WORKDIR /var/www/html
 
 FROM base AS dev
