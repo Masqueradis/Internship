@@ -14,16 +14,9 @@ COPY ./docker/php/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 RUN set -xe; \
     apt-get update; \
-    apt-get -y install \
-      msmtp \
-      msmtp-mta
-
-COPY ./docker/php/msmtprc /etc/msmtprc
-RUN chmod 644 /etc/msmtprc && \
-    chown root:root /etc/msmtprc
+    apt-get -y install
 
 WORKDIR /var/www/html
-
 
 FROM base AS dev
 
