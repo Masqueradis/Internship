@@ -12,25 +12,10 @@ RUN pecl install xdebug \
 
 COPY ./docker/php/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
-RUN set -xe; \
-    apt-get update; \
-    apt-get -y install \
-      msmtp \
-      msmtp-mta
-
-COPY ./docker/php/msmtprc /etc/msmtprc
-RUN chmod 644 /etc/msmtprc && \
-    chown root:root /etc/msmtprc
-
 WORKDIR /var/www/html
-
 
 FROM base AS dev
 
 FROM base AS prod
-
-COPY src/composer.json ./
-
-RUN composer install
 
 COPY ./src /var/www/html
