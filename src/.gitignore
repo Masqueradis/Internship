@@ -1,3 +1,4 @@
 vendor
 logs
 .cache
+.php-cs-fixer.cache
