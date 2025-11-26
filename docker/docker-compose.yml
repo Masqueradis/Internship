@@ -9,6 +9,8 @@ services:
       - ../src:/var/www/html:cached
     networks:
       - ${PROJECT_NAME}
+    env_file:
+      - .env
 
   nginx:
     image: nginx:1.27-alpine
@@ -25,7 +27,7 @@ services:
 
   mailhog:
     image: mailhog/mailhog
-    container_name: "mailhog"
+    container_name: "${PROJECT_NAME}_mailhog"
     ports:
       - "${SMTP_PORT}:1025"
       - "${MAIL_PORT}:8025"
