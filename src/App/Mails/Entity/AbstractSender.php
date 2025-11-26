@@ -24,15 +24,15 @@ abstract class AbstractSender implements EmailInterface
 
         $this->mailer->clearAddresses();
         $this->mailer->addAddress($to);
-        $this->mailer->Subject = $calledClass::EMAIL_TYPE;
-        $this->mailer->Body = $calledClass::EMAIL_TYPE . ' works';
+        $this->mailer->Subject = static::EMAIL_TYPE;
+        $this->mailer->Body = static::EMAIL_TYPE . ' works'; //static self
 
         $result = $this->mailer->send();
 
         if ($result) {
-            printf('%s Email sent successfully!<br>', $calledClass::EMAIL_TYPE);
+            printf('%s Email sent successfully!<br>', static::EMAIL_TYPE);
         } else {
-            printf('Failed to send %s email.<br>', $calledClass::EMAIL_TYPE);
+            printf('Failed to send %s email.<br>', static::EMAIL_TYPE);
         }
     }
 }
