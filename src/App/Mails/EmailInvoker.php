@@ -47,7 +47,7 @@ class EmailInvoker
     }
 
     /**
-     * @param EmailInterface $strategy
+     * @param AbstractSender $strategy
      */
     public function setStrategy($strategy): void
     {

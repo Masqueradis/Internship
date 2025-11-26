@@ -15,6 +15,9 @@ abstract class AbstractSender implements EmailInterface
     {
     }
 
+    /**
+     * @param string $to
+     */
     public function send($to): void
     {
         $calledClass = get_called_class();
