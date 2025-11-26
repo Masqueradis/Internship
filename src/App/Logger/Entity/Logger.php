@@ -6,6 +6,7 @@ namespace App\Logger\Entity;
 
 use Psr\Log\AbstractLogger;
 use Psr\Log\LogLevel;
+use App\Logger\Entity\MyLogLevel;
 
 /**
  * @method void errorr(string $message, array $context = [])
@@ -21,31 +22,10 @@ class Logger extends AbstractLogger
     private $logFile;
 
     /**
-     * @var array<string, array{level:string, file:string}>
-     */
-    private array $levelMap = [
-        'infoo' => [
-            'level' => LogLevel::INFO,
-            'file' => __DIR__ . '/logs/info.log'
-        ],
-        'warningg' => [
-            'level' => LogLevel::WARNING,
-            'file' => __DIR__ . '/logs/warning.log'
-        ],
-        'errorr' => [
-            'level' => LogLevel::ERROR,
-            'file' => __DIR__ . '/logs/error.log'
-        ],
-        'debugg' => [
-            'level' => LogLevel::DEBUG,
-            'file' => __DIR__ . '/logs/debug.log'
-        ]
-    ];
-
-    /**
      * @param string $method
      * @param array{0: string, 1?: array<mixed>} $arguments
      */
+
     public function __call(string $method, array $arguments): void
     {
         $message = $arguments[0];

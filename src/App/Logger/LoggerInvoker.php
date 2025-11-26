@@ -8,7 +8,7 @@ use App\Logger\Entity\Logger;
 
 class LoggerInvoker
 {
-    public function __invoke(): void
+    public function __invoke(): void // массив
     {
         $logger = new Logger();
 
@@ -34,7 +34,7 @@ class LoggerInvoker
         $logger->debugg(
             'Executing SQL: {query} with params: {par}',
             ['query' => 'SELECT * FROM users WHERE status = ?',
-            'par' => 'active']
+            'par' => 'active'] 
         );
     }
 }
