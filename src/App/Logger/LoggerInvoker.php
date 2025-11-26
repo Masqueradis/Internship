@@ -15,7 +15,7 @@ class LoggerInvoker
         $logger->errorr(
             'Failed to connect {username} to {database}',
             ['database' => 'mysql',
-        'username' => 'localhost']
+            'username' => 'localhost']
         );
         printf('<br>');
 
@@ -34,7 +34,7 @@ class LoggerInvoker
         $logger->debugg(
             'Executing SQL: {query} with params: {par}',
             ['query' => 'SELECT * FROM users WHERE status = ?',
-        'par' => 'active']
+            'par' => 'active']
         );
     }
 }
