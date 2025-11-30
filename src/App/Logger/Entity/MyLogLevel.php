@@ -6,32 +6,49 @@ namespace App\Logger\Entity;
 
 use Psr\Log\LogLevel;
 
-class MyLogLevel 
+
+class MyLogLevel
 {
-    public function __construct(
-    private array $levelMap
-    ) {
     /**
-     * @var array<string, array{level:string, file:string}>
+     * @var array<string, array{level: string, file:string}>
      */
-    $levelMap = [
+    private array $levelMap;
+
+    public function __construct() 
+    {
+        $this->levelMap = [
         'infoo' => [
             'level' => LogLevel::INFO,
-            'file' => __DIR__ . '/../../var/logs/info.log'
+            'file' => __DIR__ . '/../../../var/logs/info.log'
         ],
         'warningg' => [
             'level' => LogLevel::WARNING,
-            'file' => __DIR__ . '/../../var/logs/warning.log'
+            'file' => __DIR__ . '/../../../var/logs/warning.log'
         ],
         'errorr' => [
             'level' => LogLevel::ERROR,
-            'file' => __DIR__ . '/../../var/logs/error.log'
+            'file' => __DIR__ . '/../../../var/logs/error.log'
         ],
         'debugg' => [
             'level' => LogLevel::DEBUG,
-            'file' => __DIR__ . '/../../var/logs/debug.log'
+            'file' => __DIR__ . '/../../../var/logs/debug.log'
         ]
     ];
+    }
 
+    /**
+     * @return array<string, array{level: string, file: string}>
+     */
+    public function getLevelMap(): array
+    {
+        return $this->levelMap;
+    }
+
+    /**
+     * @return array{level: string, file: string}
+     */
+    public function getLevelConfig(string $method): array
+    {
+        return $this->levelMap[$method];
     }
 }

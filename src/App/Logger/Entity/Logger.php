@@ -21,24 +21,16 @@ class Logger extends AbstractLogger
      */
     private $logFile;
 
-    private $levelMap = [
-        'infoo' => [
-            'level' => LogLevel::INFO,
-            'file' => __DIR__ . '/../../../var/logs/info.log'
-        ],
-        'warningg' => [
-            'level' => LogLevel::WARNING,
-            'file' => __DIR__ . '/../../../var/logs/warning.log'
-        ],
-        'errorr' => [
-            'level' => LogLevel::ERROR,
-            'file' => __DIR__ . '/../../../var/logs/error.log'
-        ],
-        'debugg' => [
-            'level' => LogLevel::DEBUG,
-            'file' => __DIR__ . '/../../../var/logs/debug.log'
-        ]
-    ];
+    /**
+     * @var array<string, array{level: string, file: string}>
+     */
+    private array $levelMap;
+
+    public function __construct()
+    {
+        $myLogLevel = new MyLogLevel();
+        $this->levelMap = $myLogLevel->getLevelMap();
+    }
 
     /**
      * @param string $method
@@ -98,7 +90,7 @@ class Logger extends AbstractLogger
     }
 
     /**
-     * @param string $level
+     * @param mixed $level
      * @param string $message
      * @param array<mixed> $context
      */
