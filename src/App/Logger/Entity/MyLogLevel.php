@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Logger\Entity;
 
-class LogLevel 
+use Psr\Log\LogLevel;
+
+class MyLogLevel 
 {
     public function __construct(
     private array $levelMap
