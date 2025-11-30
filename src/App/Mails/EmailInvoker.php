@@ -69,7 +69,7 @@ class EmailInvoker
         foreach($emailStrategies as $emailStrat => $email)
         {
             $this->setStrategy(new $emailStrat($this->mailer));
-            yield $emailStrat['email'];
+            yield $email;
         }
     }
 }

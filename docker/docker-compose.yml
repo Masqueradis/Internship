@@ -7,6 +7,9 @@ services:
     container_name: ${PROJECT_NAME}_php
     volumes:
       - ../src:/var/www/html:cached
+    environment:
+      - SMTP_HOST=mailhog
+      - SMTP_PORT=1025
     networks:
       - ${PROJECT_NAME}
 
