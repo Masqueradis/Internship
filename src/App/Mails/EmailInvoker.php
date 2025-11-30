@@ -59,16 +59,17 @@ class EmailInvoker
      */
     public function gen(): iterable
     {
-        $this->setStrategy(new TestSender($this->mailer));
-        yield 'test@example.com';
-
-        $this->setStrategy(new HelloSender($this->mailer));
-        yield 'hello@example.com';
-
-        $this->setStrategy(new ReminderSender($this->mailer));
-        yield 'reminder@example.com';
-
-        $this->setStrategy(new NotificationSender($this->mailer));
-        yield 'notification@example.com';
+        $emailStrategies = [
+            TestSender::class => 'test@example.com',
+            HelloSender::class => 'hello@example.com',
+            ReminderSender::class => 'reminder@example.com',
+            NotificationSender::class => 'notification@example.com'
+        ];
+        
+        foreach($emailStrategies as $emailStrat => $email)
+        {
+            $this->setStrategy(new $emailStrat($this->mailer));
+            yield $emailStrat['email'];
+        }
     }
 }
