@@ -21,6 +21,25 @@ class Logger extends AbstractLogger
      */
     private $logFile;
 
+    private $levelMap = [
+        'infoo' => [
+            'level' => LogLevel::INFO,
+            'file' => __DIR__ . '/../../../var/logs/info.log'
+        ],
+        'warningg' => [
+            'level' => LogLevel::WARNING,
+            'file' => __DIR__ . '/../../../var/logs/warning.log'
+        ],
+        'errorr' => [
+            'level' => LogLevel::ERROR,
+            'file' => __DIR__ . '/../../../var/logs/error.log'
+        ],
+        'debugg' => [
+            'level' => LogLevel::DEBUG,
+            'file' => __DIR__ . '/../../../var/logs/debug.log'
+        ]
+    ];
+
     /**
      * @param string $method
      * @param array{0: string, 1?: array<mixed>} $arguments

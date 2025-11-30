@@ -17,19 +17,19 @@ class MyLogLevel
     $levelMap = [
         'infoo' => [
             'level' => LogLevel::INFO,
-            'file' => __DIR__ . '/logs/info.log'
+            'file' => __DIR__ . '/../../var/logs/info.log'
         ],
         'warningg' => [
             'level' => LogLevel::WARNING,
-            'file' => __DIR__ . '/logs/warning.log'
+            'file' => __DIR__ . '/../../var/logs/warning.log'
         ],
         'errorr' => [
             'level' => LogLevel::ERROR,
-            'file' => __DIR__ . '/logs/error.log'
+            'file' => __DIR__ . '/../../var/logs/error.log'
         ],
         'debugg' => [
             'level' => LogLevel::DEBUG,
-            'file' => __DIR__ . '/logs/debug.log'
+            'file' => __DIR__ . '/../../var/logs/debug.log'
         ]
     ];
 
