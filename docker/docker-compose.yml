@@ -5,6 +5,7 @@ services:
       dockerfile: docker/php/Dockerfile
       target: dev
     container_name: ${PROJECT_NAME}_php
+    user: "${CURRENT_UID:-1000}:${CURRENT_GID:-1000}"
     volumes:
       - ../src:/var/www/html:cached
     networks:
